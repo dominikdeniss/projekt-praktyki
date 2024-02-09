@@ -2,13 +2,3 @@ body {
     background-color: rgb(169, 109, 238);
   }
   
-  main {
-      display: flex;
-      justify-content: center;
-      color: darken($color: #823196, $amount: 7);
-  }
-  
-  .outlet {
-    display: flex;
-    justify-content: center;
-  }
