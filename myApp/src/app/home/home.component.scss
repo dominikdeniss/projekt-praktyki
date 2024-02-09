@@ -2,6 +2,13 @@ a, a::after{
     color: black;
 }
 
+.blue{
+    height: 300px;
+    width: 300px;
+    display:flex;
+    justify-content: flex-end;
+    background-color: blue;
+}
 .red {
     width: 250px;
     height: 250px;
