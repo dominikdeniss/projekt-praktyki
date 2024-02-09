@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-blue{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-collapse: collapse;
+    float: right;
+}
+
+
+.container-red{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.blue{
+    height: 250px;
+    width: 250px;
+    background-color: blue;
+    margin: 20px;
+}
+.red {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    margin: 20px;
+}
