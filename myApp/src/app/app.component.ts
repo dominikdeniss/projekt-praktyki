@@ -48,8 +48,20 @@ export class AppComponent {
                         routerLink: 'layout/flexbox',
                         items: [   
                         ]
-                    }
+                    },
                 ]
+
+                
+            },
+            {
+              label: 'Invoices',
+              icon: 'pi pi-fw pi-calendar-times',
+              items: [
+                {
+                  label: 'List',
+                  icon: 'pi pi-fw pi-calendar-times',
+                }
+              ]
             }
         ];
     }
