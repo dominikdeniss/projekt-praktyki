@@ -5,10 +5,12 @@ import { FlexboxComponent } from './home/layout/flexbox/flexbox.component';
 import { GridComponent } from './home/layout/grid/grid.component';
 import { LayoutComponent } from './home/layout/layout.component';
 
+
 export const routes: Routes = [
   { path: 'guide', component: GuideComponent },
   { path: '', component: HomeComponent },
   { path: 'layout/flexbox', component: FlexboxComponent },
   { path: 'layout/grid', component: GridComponent },
   { path: 'layout', component: LayoutComponent },
+
 ];
