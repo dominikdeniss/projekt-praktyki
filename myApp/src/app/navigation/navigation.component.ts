@@ -2,14 +2,18 @@ import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { OnInit } from '@angular/core';
 import { MenubarModule } from 'primeng/menubar';
+import { ListComponent } from '../home/list/list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [MenubarModule],
+  imports: [MenubarModule, ListComponent, HttpClientModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
 })
+
+
 export class NavigationComponent {
   items: MenuItem[] | undefined;
 
@@ -52,6 +56,7 @@ export class NavigationComponent {
           {
             label: 'List',
             icon: 'pi pi-fw pi-calendar-times',
+            routerLink: '/list',
           },
         ],
       },
