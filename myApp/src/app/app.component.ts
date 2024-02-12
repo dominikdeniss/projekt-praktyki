@@ -20,20 +20,16 @@ export class AppComponent {
     ngOnInit() {
         this.items = [
             {
-                label: 'Home',
-                icon: 'pi pi-fw pi-file',
-                items: []         
-            },
-            {
                 label: 'Siema tworzymy aplikacje',
                 icon: 'pi pi-fw pi-pencil',
+                routerLink: '/',
                 items: []
             },
             {
                 label: 'Guide',
                 icon: 'pi pi-fw pi-user',
-                items: [        
-                ]
+                routerLink: 'guide',
+                items: []
                             },
             {
                 label: 'Layout',
@@ -42,12 +38,14 @@ export class AppComponent {
                     {
                         label: 'Grid',
                         icon: 'pi pi-fw pi-pencil',
+                        routerLink: 'layout/grid',
                         items: [
                         ]
                     },
                     {
                         label: 'Flexbox',
                         icon: 'pi pi-fw pi-calendar-times',
+                        routerLink: 'layout/flexbox',
                         items: [   
                         ]
                     }
