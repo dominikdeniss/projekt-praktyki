@@ -7,11 +7,11 @@ import { CommonModule } from '@angular/common';
   selector: 'app-list',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './faktura.component.html',
-  styleUrl: './faktura.component.scss',
+  templateUrl: './invoice.component.html',
+  styleUrl: './invoice.component.scss',
 })
-export class FakturaComponent implements OnInit {
-  id: any;
+export class InvoiceComponent implements OnInit {
+  id: string | undefined;
 
   constructor(private route: ActivatedRoute) {}
 
