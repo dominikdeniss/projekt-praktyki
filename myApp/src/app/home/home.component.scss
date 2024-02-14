@@ -1,13 +1,30 @@
 h1{
     text-align: center;
 }
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
 .b1{
     position: fixed;
     bottom: 15px;
     left: 100px;
 }
+
 .b2{
     position: fixed;
     bottom: 15px;
     left: 15px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: grid;
+    justify-content: center;
 }
