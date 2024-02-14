@@ -15,24 +15,15 @@ export class HomeComponent {
   isMale: boolean = true;
   actualDate: Date | undefined;
   dateVisible: boolean = true;
-  guideList:
-    | string[]
-    | [
-        'Przygotować miejsce do organizacji pracy',
-        'Setup WSL',
-        'Utworzyć repozytorium',
-        'Poznajcie NPM',
-        'Utowrzyć projekt Angular',
-        'Poznajcie Angular',
-        'Angular Routing',
-        'Zainstalujcie primeNG do waszego projektu Angular',
-        'SCSS/Sass',
-        'Poznajcie flexbox i grid',
-        'Stwórzmy nawigację',
-        'TypeScript i Angular'
-      ];
+  guideList: string[] | undefined = [];
+
+  constructor() {
+    this.actualDate = new Date();
+    this.guideList = [];
+  }
 
   ngOnInit(): void {
+    this.guideList = [];
     this.guideList.push('Przygotować miejsce do organizacji pracy');
     this.guideList.push('Setup WSL');
     this.guideList.push('Utworzyć repozytorium');
@@ -45,11 +36,6 @@ export class HomeComponent {
     this.guideList.push('Poznajcie flexbox i grid');
     this.guideList.push('Stwórzmy nawigację');
     this.guideList.push('TypeScript i Angular');
-  }
-
-  constructor() {
-    this.actualDate = new Date();
-    this.guideList = [];
   }
 
   showDateTime() {
