@@ -12,8 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
 })
-
-
 export class NavigationComponent {
   items: MenuItem[] | undefined;
 
@@ -59,6 +57,12 @@ export class NavigationComponent {
             routerLink: '/list',
           },
         ],
+      },
+      {
+        label: 'test-form',
+        icon: 'pi pi-fw pi-pencil',
+        routerLink: 'test-form',
+        items: [],
       },
     ];
   }

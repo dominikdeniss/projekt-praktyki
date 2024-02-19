@@ -1,0 +1,58 @@
+<div class="wrapper">
+    <div class="h3">
+        <h3>Test-form</h3>
+    </div>
+
+    <div class="form">
+        <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="flex flex-column gap-2">
+                        <label for="username">First name</label>
+                        <input type="text" id="firstName" pInputText formControlName="firstName">
+                    </div>
+
+                    <div class="flex flex-column gap-2">
+                        <label for="username">Last name</label>
+                        <input type="text" id="lastName" pInputText formControlName="lastName">
+                    </div>
+
+                </div>
+                    
+                <div class="gri-item">
+                    <div class="card flex justify-content-center">
+                        <label for="date">Data urodzenia:</label>
+                        <p-calendar formControlName="birthDate" dateFormat="dd.mm.yy"></p-calendar>
+                    </div>
+                    
+                    <div class="value">
+                        <label class="block font-bold mb-2" for="currency-pl">Stan konta:</label>
+                        <p-inputNumber type="number" formControlName="Value" inputId="currency-pl" mode="currency" currency="PLN" locale="PL"></p-inputNumber>
+                    </div>
+                    
+                </div>
+                    <div class="city">
+                        <label for="cities"></label>
+                        <p-dropdown [options]="cities" formControlName="City" optionLabel="name" [showClear]="true" placeholder="Select a City"></p-dropdown>
+                    </div>
+                    
+                    <div class="button">
+                        <p-button label="Submit" type="submit"></p-button>
+                    </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="info">
+        <p>Wyświetlone informacje:</p>
+    </div>
+
+    <div class="show">
+        <p>Imię: {{ displayedFirstName }}</p>
+        <p>Nazwisko: {{ displayedLastName }}</p>
+        <p>Data urodzenia: {{displayedBirthDate }}</p>
+        <p>Stan konta: {{ displayedValue }}</p>
+        <p>Miasto: {{ displayedCities }}</p>
+    </div>
+</div>
