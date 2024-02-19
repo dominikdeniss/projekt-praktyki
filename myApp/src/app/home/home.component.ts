@@ -10,29 +10,38 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-    name: string = 'Jarek';
-    age: number = 30;
-    isMale: boolean = true;
-    actualDate: Date|undefined;
-    dateVisible: boolean = true;
-    guideList: string[]|["Zadanie1", "Zadanie2", "Zadanie3"];
+  name: string = 'Jarek';
+  age: number = 30;
+  isMale: boolean = true;
+  actualDate: Date | undefined;
+  dateVisible: boolean = true;
+  guideList: string[] | undefined = [];
 
-    ngOnInit(): void{
-      this.guideList.push("Zadanie1");
-      this.guideList.push("Zadanie2");
-      this.guideList.push("Zadanie3");
+  constructor() {
+    this.actualDate = new Date();
+    this.guideList = [];
+  }
 
-    }
+  ngOnInit(): void {
+    this.guideList = [];
+    this.guideList.push('Przygotować miejsce do organizacji pracy');
+    this.guideList.push('Setup WSL');
+    this.guideList.push('Utworzyć repozytorium');
+    this.guideList.push('Poznajcie NPM');
+    this.guideList.push('Utowrzyć projekt Angular');
+    this.guideList.push('Poznajcie Angular');
+    this.guideList.push('Angular Routing');
+    this.guideList.push('Zainstalujcie primeNG do waszego projektu Angular');
+    this.guideList.push('SCSS/Sass');
+    this.guideList.push('Poznajcie flexbox i grid');
+    this.guideList.push('Stwórzmy nawigację');
+    this.guideList.push('TypeScript i Angular');
+  }
 
-    constructor(){
-      this.actualDate = new Date();
-      this.guideList = [];
-    }
-
-    showDateTime(){
-      this.actualDate = new Date();
-    }
-    toggleDateVisibility(){
-      this.dateVisible = !this.dateVisible;
-    }
+  showDateTime() {
+    this.actualDate = new Date();
+  }
+  toggleDateVisibility() {
+    this.dateVisible = !this.dateVisible;
+  }
 }
