@@ -19,7 +19,7 @@ export class NavigationComponent {
     this.items = [
       {
         label: 'Siema tworzymy aplikacje',
-        icon: 'pi pi-fw pi-pencil',
+        icon: 'pi pi-home',
         routerLink: '/',
         items: [],
       },
@@ -31,17 +31,17 @@ export class NavigationComponent {
       },
       {
         label: 'Layout',
-        icon: 'pi pi-fw pi-calendar',
+        icon: 'pi pi-fw pi-bars',
         items: [
           {
             label: 'Grid',
-            icon: 'pi pi-fw pi-pencil',
+            icon: 'pi pi-fw pi-stop',
             routerLink: 'layout/grid',
             items: [],
           },
           {
             label: 'Flexbox',
-            icon: 'pi pi-fw pi-calendar-times',
+            icon: 'pi pi-fw pi-sort-alt',
             routerLink: 'layout/flexbox',
             items: [],
           },
@@ -49,11 +49,11 @@ export class NavigationComponent {
       },
       {
         label: 'Invoices',
-        icon: 'pi pi-fw pi-calendar-times',
+        icon: 'pi pi-fw pi-paperclip',
         items: [
           {
             label: 'List',
-            icon: 'pi pi-fw pi-calendar-times',
+            icon: 'pi pi-fw pi-list',
             routerLink: '/list',
           },
         ],
