@@ -55,9 +55,6 @@ export class TestFormComponent implements OnInit {
     });
   }
 
-  // const displayedDateWithoutTimezone = displayedDate.toLocaleDateString('en-US', {timeZone:'UTC'});
-  // const displayedDate = new Date(this.displayedBirthDate);
-
   onSubmit() {
     this.displayedFirstName = this.myForm.get('firstName').value;
     this.displayedLastName = this.myForm.get('lastName').value;
@@ -67,13 +64,6 @@ export class TestFormComponent implements OnInit {
     const selectedCity = this.myForm.get('City').value;
     this.displayedCities = selectedCity ? selectedCity.name : '';
     this.isButtonDisabled = false;
-    // const birthDateString = this.myForm.get('birthDate').value;
-    // this.displayedBirthDate = new Date(birthDateString);
-    // this.displayedBirthDate.setMinutes(
-    //   this.displayedBirthDate.getMinutes() -
-    //     this.displayedBirthDate.getTimezoneOffset()
-    // );
-    // this.displayedBirthDate.setHours(0, 0, 0, 0);
   }
 
   ngOnInit(): void {

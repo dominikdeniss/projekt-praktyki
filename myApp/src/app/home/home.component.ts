@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
 import { CommonModule } from '@angular/common';
+import { MenuItem, MessageService } from 'primeng/api';
+import { PrimeIcons } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +10,9 @@ import { CommonModule } from '@angular/common';
   imports: [AccordionModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
+  providers: [PrimeIcons],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   name: string = 'Jarek';
   age: number = 30;
   isMale: boolean = true;
@@ -17,7 +20,7 @@ export class HomeComponent {
   dateVisible: boolean = true;
   guideList: string[] | undefined = [];
 
-  constructor() {
+  constructor(private messageService: MessageService) {
     this.actualDate = new Date();
     this.guideList = [];
   }

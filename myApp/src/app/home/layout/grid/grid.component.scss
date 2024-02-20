@@ -9,10 +9,11 @@ body {
     justify-content: center;
       display: grid;
       grid-gap: 50px;
-      grid-template-columns: [col] 10% [col] 5% [col] 10% [col] 5% [col] 10%  ;
-      grid-template-rows: [row] 10% [row] 10%  [row] 10% [row] 0.22% [row] 10% ;
+      grid-template-columns: [col] 10% [col] 10% [col] 10% [col] 10% [col] 10%  ;
+      grid-template-rows: [row] 15% [row] 10%  [row] 2%[row] 10% [row] 10% ;
       background-color: #fff;
       color: #444;
+      height: 60%;
     }
   
     .box {
@@ -28,7 +29,7 @@ body {
       grid-column: col / span 5;
       grid-row: row ;
       background-color: blue;
-      margin-bottom: 90%;
+      margin-bottom: 60%;
     }
     .b {
       grid-column: col ;
@@ -57,5 +58,6 @@ body {
         grid-column: col 2 / span 3;
         grid-row: row 5;
         background-color: greenyellow;
-        margin-top: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
