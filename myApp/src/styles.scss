@@ -2,3 +2,52 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
+
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+.bg {
+    animation:slide 5s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(0, 208, 0) 50%, rgb(91, 249, 38) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration: 7s;
+  }
+  
+  .bg3 {
+    animation-duration: 9s;
+  }
+
+  .bg4{
+    animation-duration: 11s;
+  }
+  
+  
+  h1 {
+    font-family:monospace;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-15%);
+    }
+    100% {
+      transform:translateX(15%);
+    }
+  }

@@ -3,17 +3,20 @@ import { AccordionModule } from 'primeng/accordion';
 import { CommonModule } from '@angular/common';
 import { MenuItem, MessageService } from 'primeng/api';
 import { PrimeIcons } from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
+import { TimelineModule } from 'primeng/timeline';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AccordionModule, CommonModule],
+  imports: [AccordionModule, CommonModule, AccordionModule, ButtonModule, TimelineModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   providers: [PrimeIcons],
 })
 export class HomeComponent implements OnInit {
   name: string = 'Jarek';
+  surname: string = 'Kowalski';
   age: number = 30;
   isMale: boolean = true;
   actualDate: Date | undefined;
@@ -42,8 +45,9 @@ export class HomeComponent implements OnInit {
   }
 
   showDateTime() {
-    this.actualDate = new Date();
-  }
+   this.actualDate = new Date();
+}
+
   toggleDateVisibility() {
     this.dateVisible = !this.dateVisible;
   }

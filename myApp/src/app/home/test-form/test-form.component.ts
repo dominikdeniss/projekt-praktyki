@@ -58,7 +58,8 @@ export class TestFormComponent implements OnInit {
   onSubmit() {
     this.displayedFirstName = this.myForm.get('firstName').value;
     this.displayedLastName = this.myForm.get('lastName').value;
-    this.displayedBirthDate = this.myForm.get('birthDate').value;
+    const birthDate = this.myForm.get('birthDate').value;
+    this.displayedBirthDate = birthDate instanceof Date ? birthDate.toLocaleDateString() : '';
     this.displayedValue = this.myForm.get('Value').value;
     this.displayedCities = this.myForm.get('City').value.name;
     const selectedCity = this.myForm.get('City').value;
