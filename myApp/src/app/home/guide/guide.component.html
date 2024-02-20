@@ -1,29 +1,31 @@
-<h1>Guide</h1>
-
-<div class="card flex justify-content-center">
-    <p-accordion>
-        <p-accordionTab header="Krok 1">
-            <p>
-                Najpierw należy sprawdzić wersję Angular'a przez polecenie ng v i zainstalować kompatybilną wersję primeNG poleceniem npm install primeng.
-            </p>
-        </p-accordionTab>
-        <p-accordionTab header="Krok 2">
-            <p>
-                Następnie należy przejść do pliku angular.json i umieścić w:
-                "styles":[  
-                "node_modules/primeng/resources/themes/lara-light-blue/theme.css", 
-                "node_modules/primeng/resources/primeng.min.css",
-                ]
-                oraz przejść do pliku style.css lub style.scss i umieścić w nim: 
-                import "primeng/resources/themes/lara-light-blue/theme.css";
-                import "primeng/resources/primeng.css";
-            </p>
-        </p-accordionTab>
-        <p-accordionTab header="Krok 3">
-            <p>
-                Następnie w pliku TypeScript komponentu w którym chcemy umieścić Accordion należy dodać zaimportować primeng/accordion
-                a później w imports dodać AccordionModule
-            </p>
-        </p-accordionTab>
-    </p-accordion>
+<div class="acordion">
+    <h1>Guide</h1>
+    
+    <div class="card flex justify-content-center">
+        <p-accordion>
+            <p-accordionTab header="Krok 1">
+                <p>
+                    Najpierw należy sprawdzić wersję Angular'a przez polecenie ng v i zainstalować kompatybilną wersję primeNG poleceniem npm install primeng.
+                </p>
+            </p-accordionTab>
+            <p-accordionTab header="Krok 2">
+                <p class="break-word">
+                    Następnie należy przejść do pliku angular.json i umieścić w:
+                    "styles":[  
+                    "node_modules/primeng/resources/themes/lara-light-blue/theme.css", 
+                    "node_modules/primeng/resources/primeng.min.css",
+                    ]
+                    oraz przejść do pliku style.css lub style.scss i umieścić w nim: 
+                    import "primeng/resources/themes/lara-light-blue/theme.css";
+                    import "primeng/resources/primeng.css";
+                </p>
+            </p-accordionTab>
+            <p-accordionTab header="Krok 3">
+                <p>
+                    Następnie w pliku TypeScript komponentu w którym chcemy umieścić Accordion należy dodać zaimportować primeng/accordion
+                    a później w imports dodać AccordionModule
+                </p>
+            </p-accordionTab>
+        </p-accordion>
+    </div>
 </div>

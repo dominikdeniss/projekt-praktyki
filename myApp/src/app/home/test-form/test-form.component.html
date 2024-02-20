@@ -49,10 +49,24 @@
     </div>
 
     <div class="show">
-        <p>Imię: {{ displayedFirstName }}</p>
-        <p>Nazwisko: {{ displayedLastName }}</p>
-        <p>Data urodzenia: {{displayedBirthDate }}</p>
-        <p>Stan konta: {{ displayedValue }}</p>
-        <p>Miasto: {{ displayedCities }}</p>
+        <div class="f-name">
+            <p>Imię: {{ displayedFirstName }}</p>
+        </div>
+
+        <div class="l-name">
+            <p>Nazwisko: {{ displayedLastName }}</p>
+        </div>
+        
+        <div class="birth">
+            <p>Data urodzenia: {{displayedBirthDate }}</p>
+        </div>
+        
+        <div class="account">
+            <p>Stan konta: {{ displayedValue }}</p>
+        </div>
+        
+        <div  class="town">
+            <p>Miasto: {{ displayedCities }}</p>
+        </div>
     </div>
 </div>
