@@ -1,19 +1,22 @@
 <h1>HOME</h1>
-<div  class="info-container">
+<div class="info-container">
 <p class="info">Imię: {{ name }}</p>
 <p class="info">Wiek: {{ age }}</p>
 <p class="info">Płeć: {{ isMale ? 'Mężczyzna' : 'Kobieta' }}</p>
 </div>
-<div class="buttons">
+
+<div class="grid-buttons">
   <div class="card flex justify-content-center">
     <p-button class="b1" [loading]="loading" (click)="showDateTime" (onClick)="showDateTime()">Aktualizuj datę</p-button>
   </div>
-  <div>
+  
+  <div class="date-button">
     <p-button class="b2" (click)="toggleDateVisibility()">
-      {{ dateVisible ? 'Hide' : 'Show' }} date
-    </p-button></div>
+      {{ dateVisible ? 'Ukryj' : 'Pokaż' }} datę
+    </p-button>
   </div>
-  <div class="p1"><p *ngIf="dateVisible">{{ actualDate }}</p></div>
+</div>
+<div class="p1"><p *ngIf="dateVisible">{{ actualDate }}</p></div>
 
  <div class="container">
   <h2>Task Checklist</h2>
