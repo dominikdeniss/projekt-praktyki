@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
   dateVisible: boolean = true;
   guideList: string[] | undefined = [];
   loading: boolean = false;
+  completedTasks: string[] = [];
 
   constructor(private messageService: MessageService) {
     this.actualDate = new Date();
@@ -49,6 +50,18 @@ export class HomeComponent implements OnInit {
     this.guideList.push('Poznajcie flexbox i grid');
     this.guideList.push('Stwórzmy nawigację');
     this.guideList.push('TypeScript i Angular');
+  }
+
+  isTaskCompleted(task: string): boolean {
+    return this.completedTasks.includes(task);
+  }
+
+  toggleTaskCompletion(task: string): void {
+    if (this.isTaskCompleted(task)) {
+      this.completedTasks = this.completedTasks.filter(t => t !== task);
+    } else {
+      this.completedTasks.push(task);
+    }
   }
 
   showDateTime() {
