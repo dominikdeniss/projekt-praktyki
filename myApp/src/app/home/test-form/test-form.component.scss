@@ -1,28 +1,33 @@
 .form { 
-  width: 80%;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
 
   .grid-container {
     width: 80%;
     display: grid;
     grid-template-columns: [col] 50% [col] 50%;
-    grid-template-rows: [row] 20% [row] 30% [row] 40%;
-    grid-row-gap: 10%;
-    // grid-column-gap: 5%;
-    // gap: 10%;
-
-    .button {
-      display: grid;
-      justify-content: center;
-    }
+    grid-template-rows: [row] 20% [row] 30%;
+    grid-row-gap: 65%;
+    margin-left: 10%;
+  }
+  
+  .button {
+    display: grid;
+    justify-content: center;
   }
 
   .city {
-    width: 87%;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 20%;
 
     p-dropdown {
       display: grid;
-      width: 100%;
-      align-items: flex-start;
+      width: 60%;
+      justify-content: center;
+      margin-right: 0;
     }
   }
 }
@@ -41,15 +46,46 @@
 
 .show {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  gap: 20px;
-  margin-left: 20%;
-  margin-right: 20%;
-  font-size: 20px;
+  grid-template-columns: [col] 10% [col] 10%;
+  grid-column-gap: 40%;
+  grid-row-gap: 5%;
+  width: 80%;
+  margin-left: 10%;
+  font-size: 18px;
+  justify-content: center;
 
   .city {
     width: 80%;
   }
 }
 
+@media (width <= 670px) {
+  .form { 
+  
+    .grid-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    .button {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .city {
+  
+      p-dropdown {
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+      }
+    }
+  }
+  
+  .show {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+}
