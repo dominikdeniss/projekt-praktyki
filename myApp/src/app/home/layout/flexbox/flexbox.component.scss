@@ -3,6 +3,11 @@ body{
     padding: 0;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
 .container-blue{
     display: flex;
     justify-content: flex-end;
