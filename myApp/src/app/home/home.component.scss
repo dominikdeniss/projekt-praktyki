@@ -57,26 +57,10 @@ h2 {
     margin-bottom: 20px;
 }
 
-.button1 {
-    margin-right: 10px;
-}
-
-.button2 {
-    color: green;
-    margin-right: 10px;
-}
-
 .p1{
     position: fixed;
     bottom: 0px;
     left: 15px;
-}
-
-.buttons{
-    display: flex;
-    position: fixed;
-    bottom: 5%;
-    left: 1%;
 }
 
 ul {
@@ -84,23 +68,45 @@ ul {
     justify-content: center;
 }
 
-.list {
-    margin-top: 5%;
-}
-
-.buttons {
-    background-color: #b1a1a1;
-}
-
 .date-button {
     margin-left: 20%;
 }
 
+.grid-buttons {
+    display: grid;
+    position: fixed;
+    bottom: 5%;
+    grid-template-columns: [col] 50% [col] 50%;
+}
+
 @media (width <= 670px) {
-    .buttons {
+    .grid-buttons {
         display: flex;
         position: fixed;
-        bottom: 10%;
-        left: 3%;
+        bottom: 7%;
+    }
+
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info{
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        border-color: gray;
+        width: 50%;
+    }
+
+    .task{
+        background-color: white;
+        padding: 10px;
+        margin: 10px;
+        border-color: gray;
+        border-radius: 10px;
+        width: 50%;
     }
 }
