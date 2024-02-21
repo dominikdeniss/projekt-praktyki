@@ -20,7 +20,7 @@
 
                 </div>
                     
-                <div class="grid-item">
+                <div class="gridd-item">
                     <div class="card flex justify-content-center">
                         <label for="date">Data urodzenia:</label>
                         <p-calendar formControlName="birthDate" dateFormat="dd.mm.yy"></p-calendar>
@@ -37,9 +37,10 @@
                     </div>
                     
                     <div class="button">
-                        <p-button label="Submit" type="submit"></p-button>
+                        <div class="card flex justify-content-center">
+                            <p-button label="Submit" type="submit" [loading]="loading" loadingIcon="pi pi-plus" (onSubmit)="onSubmit()"></p-button>
+                        </div>
                     </div>
-                </div>
             </div>
         </form>
     </div>

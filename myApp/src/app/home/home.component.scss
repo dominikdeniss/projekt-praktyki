@@ -7,7 +7,6 @@ h2 {
     justify-content: center;
 }
 
-
 .container {
     max-width: 1000px;
     margin-left: auto;
@@ -66,8 +65,8 @@ h2 {
 .buttons{
     display: flex;
     position: fixed;
-    bottom: 45px;
-    left: 15px;
+    bottom: 5%;
+    left: 1%;
 }
 
 ul {
@@ -83,4 +82,11 @@ ul {
     background-color: #b1a1a1;
 }
 
-
+@media (width <= 670px) {
+    .buttons {
+        display: flex;
+        position: fixed;
+        bottom: 10%;
+        left: 3%;
+    }
+}

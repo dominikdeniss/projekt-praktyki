@@ -43,6 +43,7 @@ export class TestFormComponent implements OnInit {
   displayedCities: City[] | undefined;
   firstName: string | undefined;
   date: Date[] | undefined;
+  loading: boolean = false;
 
   constructor() {
     this.myForm = new FormGroup({
@@ -59,12 +60,19 @@ export class TestFormComponent implements OnInit {
     this.displayedFirstName = this.myForm.get('firstName').value;
     this.displayedLastName = this.myForm.get('lastName').value;
     const birthDate = this.myForm.get('birthDate').value;
-    this.displayedBirthDate = birthDate instanceof Date ? birthDate.toLocaleDateString() : '';
+    this.displayedBirthDate =
+      birthDate instanceof Date ? birthDate.toLocaleDateString() : '';
     this.displayedValue = this.myForm.get('Value').value;
     this.displayedCities = this.myForm.get('City').value.name;
     const selectedCity = this.myForm.get('City').value;
     this.displayedCities = selectedCity ? selectedCity.name : '';
     this.isButtonDisabled = false;
+
+    this.loading = true;
+
+    setTimeout(() => {
+      this.loading = false;
+    }, 1000);
   }
 
   ngOnInit(): void {
