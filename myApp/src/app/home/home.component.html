@@ -4,7 +4,9 @@
 <p>Płeć: {{ isMale ? 'Mężczyzna' : 'Kobieta' }}</p>
 
 <div class="buttons">
-  <p-button class="b1" (click)="showDateTime()">Aktualizuj datę</p-button>
+  <div class="card flex justify-content-center">
+    <p-button class="b1" [loading]="loading" (click)="showDateTime" (onClick)="showDateTime()">Aktualizuj datę</p-button>
+  </div>
   <div>
     <p-button class="b2" (click)="toggleDateVisibility()">
       {{ dateVisible ? 'Hide' : 'Show' }} date
