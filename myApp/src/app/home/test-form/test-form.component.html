@@ -38,7 +38,9 @@
                     </div>
                     
                     <div class="button">
-                        <p-button label="Submit" type="submit"></p-button>
+                        <div class="card flex justify-content-center">
+                            <p-button label="Submit" type="submit" [loading]="loading" loadingIcon="pi pi-plus" (onSubmit)="onSubmit()"></p-button>
+                        </div>
                     </div>
             </div>
         </form>

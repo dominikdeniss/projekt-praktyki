@@ -9,7 +9,13 @@ import { TimelineModule } from 'primeng/timeline';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AccordionModule, CommonModule, AccordionModule, ButtonModule, TimelineModule],
+  imports: [
+    AccordionModule,
+    CommonModule,
+    AccordionModule,
+    ButtonModule,
+    TimelineModule,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   providers: [PrimeIcons],
@@ -22,6 +28,7 @@ export class HomeComponent implements OnInit {
   actualDate: Date | undefined;
   dateVisible: boolean = true;
   guideList: string[] | undefined = [];
+  loading: boolean = false;
 
   constructor(private messageService: MessageService) {
     this.actualDate = new Date();
@@ -45,8 +52,12 @@ export class HomeComponent implements OnInit {
   }
 
   showDateTime() {
-   this.actualDate = new Date();
-}
+    this.actualDate = new Date();
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+    }, 500);
+  }
 
   toggleDateVisibility() {
     this.dateVisible = !this.dateVisible;
