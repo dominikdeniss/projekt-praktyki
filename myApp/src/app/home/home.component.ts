@@ -5,6 +5,9 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { PrimeIcons } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { TimelineModule } from 'primeng/timeline';
+import { PanelModule } from 'primeng/panel';
+import { CardModule } from 'primeng/card';
+import { FieldsetModule } from 'primeng/fieldset';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +18,9 @@ import { TimelineModule } from 'primeng/timeline';
     AccordionModule,
     ButtonModule,
     TimelineModule,
+    PanelModule,
+    CardModule,
+    FieldsetModule,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

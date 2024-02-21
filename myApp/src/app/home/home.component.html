@@ -1,16 +1,38 @@
 <h1>HOME</h1>
-<p>Imię: {{ name }}</p>
-<p>Wiek: {{ age }}</p>
-<p>Płeć: {{ isMale ? 'Mężczyzna' : 'Kobieta' }}</p>
 
-<div class="buttons">
+<div class="grid-home-cards">
+
+  <div class="name-card flex justify-content-center">
+    <p-fieldset legend="Imie">
+      <p>{{ name }}</p>
+    </p-fieldset>
+  </div>
+
+  <div class="age-card flex justify-content-center">
+    <p-fieldset legend="Wiek">
+      <p>{{ age }}</p>
+    </p-fieldset>
+  </div>
+
+  <div class="male-card flex justify-content-center">
+    <p-fieldset legend="Płeć">
+      <p>{{ isMale ? 'Mężczyzna' : 'Kobieta' }}</p>
+    </p-fieldset>
+  </div>
+</div>
+
+<div class="grid-buttons">
   <div class="card flex justify-content-center">
     <p-button class="b1" [loading]="loading" (click)="showDateTime" (onClick)="showDateTime()">Aktualizuj datę</p-button>
   </div>
-  <div>
+  
+  <div class="date-button">
     <p-button class="b2" (click)="toggleDateVisibility()">
-      {{ dateVisible ? 'Hide' : 'Show' }} date
-    </p-button></div>
+      {{ dateVisible ? 'Ukryj' : 'Pokaż' }} datę
+    </p-button>
   </div>
-  <div class="p1"><p *ngIf="dateVisible">{{ actualDate }}</p></div>
+</div>
+<div class="p1"><p *ngIf="dateVisible">{{ actualDate }}</p></div>
  
+
+<!-- header="Header" -->

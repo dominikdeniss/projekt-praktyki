@@ -47,26 +47,10 @@ h2 {
     }
 }
 
-.button1 {
-    margin-right: 10px;
-}
-
-.button2 {
-    color: green;
-    margin-right: 10px;
-}
-
 .p1{
     position: fixed;
     bottom: 0px;
     left: 15px;
-}
-
-.buttons{
-    display: flex;
-    position: fixed;
-    bottom: 5%;
-    left: 1%;
 }
 
 ul {
@@ -78,19 +62,55 @@ ul {
     margin-top: 5%;
 }
 
-.buttons {
-    background-color: #b1a1a1;
+.grid-buttons {
+    display: grid;
+    position: fixed;
+    bottom: 5%;
+    grid-template-columns: [col] 50% [col] 50%;
+    grid-template-rows: [row] 100%;
+    grid-column-gap: 5%;
+    justify-content: flex-start;
 }
 
-.date-button {
-    margin-left: 20%;
+.data {
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.grid-home-cards {
+    display: grid;
+    grid-template-columns: [col] 20% [col] 20% [col] 20%;
+    grid-column-gap: 3%;
+    justify-content: center;
 }
 
 @media (width <= 670px) {
-    .buttons {
+    .grid-buttons {
         display: flex;
         position: fixed;
         bottom: 10%;
-        left: 3%;
+        grid-template-columns: [col] 50% [col] 50%;
+        grid-template-rows: [row] 100%;
+        grid-column-gap: 5%;
+        justify-content: center;
+    }
+
+    .grid-home-cards {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .name-card {
+        padding: 5%;
+    }
+
+    .age-card {
+        padding: 5%;
+    }
+
+    .male-card {
+        padding: 5%;
     }
 }
