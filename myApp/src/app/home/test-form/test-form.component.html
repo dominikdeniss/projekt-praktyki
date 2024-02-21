@@ -20,7 +20,7 @@
 
                 </div>
                     
-                <div class="gri-item">
+                <div class="grid-item">
                     <div class="card flex justify-content-center">
                         <label for="date">Data urodzenia:</label>
                         <p-calendar formControlName="birthDate" dateFormat="dd.mm.yy"></p-calendar>
@@ -31,7 +31,6 @@
                         <p-inputNumber type="number" formControlName="Value" inputId="currency-pl" mode="currency" currency="PLN" locale="PL"></p-inputNumber>
                     </div>
                     
-                </div>
                     <div class="city">
                         <label for="cities"></label>
                         <p-dropdown [options]="cities" formControlName="City" optionLabel="name" [showClear]="true" placeholder="Select a City"></p-dropdown>
@@ -40,6 +39,7 @@
                     <div class="button">
                         <p-button label="Submit" type="submit"></p-button>
                     </div>
+                </div>
             </div>
         </form>
     </div>

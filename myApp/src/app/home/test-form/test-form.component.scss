@@ -1,27 +1,23 @@
 .form { 
-  width: 60%;
+  width: 80%;
 
   .grid-container {
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20%;
+    grid-template-columns: [col] 50% [col] 50%;
+    grid-template-rows: [row] 20% [row] 30% [row] 40%;
     grid-row-gap: 10%;
-    text-align: center;
+    // grid-column-gap: 5%;
+    // gap: 10%;
 
-    .grid-item {
-      display: flex;
-      flex-direction: column;
-
-    }
     .button {
       display: grid;
-      text-align: center;
-      margin: 0;
+      justify-content: center;
     }
   }
 
   .city {
-    margin-left: 10%;
+    width: 87%;
 
     p-dropdown {
       display: grid;
@@ -37,6 +33,11 @@
   margin-top: 5%;
   margin-bottom: 20px;
 }
+.h3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+}
 
 .show {
   display: grid;
@@ -46,14 +47,9 @@
   margin-left: 20%;
   margin-right: 20%;
   font-size: 20px;
+
+  .city {
+    width: 80%;
+  }
 }
 
-.city {
-  width: 80%;
-}
-
-.h3 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3%;
-}
