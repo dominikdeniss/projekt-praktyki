@@ -7,9 +7,9 @@
 
 <div class="grid-buttons">
   <div class="card flex justify-content-center">
-    <p-button class="b1" [loading]="loading" (click)="showDateTime" (onClick)="showDateTime()">Aktualizuj datę</p-button>
+    <p-button class="b1" [loading]="loading" (click)="showDateTime()">Aktualizuj datę</p-button>
   </div>
-  
+  <!-- (onClick)="showDateTime() -->
   <div class="date-button">
     <p-button class="b2" (click)="toggleDateVisibility()">
       {{ dateVisible ? 'Ukryj' : 'Pokaż' }} datę
@@ -17,15 +17,18 @@
   </div>
 </div>
 <div class="p1"><p *ngIf="dateVisible">{{ actualDate }}</p></div>
+<h2>Task Timeline</h2>
 
- <div class="container">
-  <h2>Task Checklist</h2>
-  <div class="task-container">
-    <ul>
-      <p *ngFor="let task of guideList">
-        <input class="check" type="checkbox" id="{{ task }}" [checked]="isTaskCompleted(task)" (change)="toggleTaskCompletion(task)">
-        <label class="task" for="{{ task }}">{{ task }}</label>
-      </p>
-    </ul>
-  </div>
+<div class="timeline flex flex-wrap gap-6">
+  <p-timeline [value]="events" class="w-full md:w-20rem" align="alternate">
+      <ng-template pTemplate="content" let-event>
+          <small class="p-text-secondary">{{ event.date }}</small>
+      </ng-template>
+      <ng-template pTemplate="content" let-event>
+          {{ event.status }}
+          <div class="timeline-date">
+            {{ event.date }}
+          </div>
+      </ng-template>
+  </p-timeline>
 </div>

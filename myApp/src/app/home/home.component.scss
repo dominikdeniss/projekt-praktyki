@@ -20,6 +20,7 @@ h2 {
     border-radius: 10px;
     border-color: gray;
     width: 15%;
+    color: black;
 }
 
 .container{
@@ -60,7 +61,8 @@ h2 {
 .p1{
     position: fixed;
     bottom: 0px;
-    left: 15px;
+    left: 10px;
+    width: 30%;
 }
 
 ul {
@@ -75,16 +77,46 @@ ul {
 .grid-buttons {
     display: grid;
     position: fixed;
-    bottom: 5%;
+    bottom: 7%;
     grid-template-columns: [col] 50% [col] 50%;
 }
 
-@media (width <= 670px) {
+.timeline {
+    padding-top: 2%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+@media (width <= 1450px){
     .grid-buttons {
-        display: flex;
+        display: grid;
         position: fixed;
-        bottom: 7%;
+        bottom: 8%;
+        grid-template-columns: [col] 50% [col] 50%;
     }
+
+    .p1{
+        position: fixed;
+        bottom: 0px;
+        left: 5px;
+        width: 22%;
+    }
+}
+
+@media (width <= 1400px) {
+    .grid-buttons {
+        display: none;
+        position: fixed;
+        bottom: 10%;
+        flex-direction: column;
+    }
+
+    .p1 {
+        display: none;
+    }
+}
+
+@media (width <= 670px) {
 
     .info-container{
         display: flex;
@@ -108,5 +140,9 @@ ul {
         border-color: gray;
         border-radius: 10px;
         width: 50%;
+    }
+
+    .timeline {
+        margin-bottom: 30%;
     }
 }
