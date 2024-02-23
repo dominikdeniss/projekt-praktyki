@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { CacheService } from '../../cache/cache.component';
 
 interface City {
   name: string;
@@ -45,7 +46,8 @@ export class TestFormComponent implements OnInit {
   date: Date[] | undefined;
   loading: boolean = false;
 
-  constructor() {
+
+  constructor(private cacheService: CacheService) {
     this.myForm = new FormGroup({
       firstName: new FormControl<string | null>('', Validators.required),
       lastName: new FormControl<string | null>('', Validators.required),
@@ -59,15 +61,22 @@ export class TestFormComponent implements OnInit {
   onSubmit() {
     this.displayedFirstName = this.myForm.get('firstName').value;
     this.displayedLastName = this.myForm.get('lastName').value;
+    const firstName = this.myForm.get('firstName').value;
+    const lastName = this.myForm.get('lastName').value;
     const birthDate = this.myForm.get('birthDate').value;
+    const value = this.myForm.get('Value').value;
     this.displayedBirthDate =
-      birthDate instanceof Date ? birthDate.toLocaleDateString() : '';
-    this.displayedValue = this.myForm.get('Value').value;
+    birthDate instanceof Date ? birthDate.toLocaleDateString() : '';
     this.displayedCities = this.myForm.get('City').value.name;
     const selectedCity = this.myForm.get('City').value;
     this.displayedCities = selectedCity ? selectedCity.name : '';
+    this.cacheService.cachedBirthDate = birthDate instanceof Date ? birthDate.toLocaleDateString() : '';;
+    this.cacheService.cachedName = firstName;
+    this.cacheService.cachedSurname = lastName;
+    this.cacheService.cachedCity = selectedCity ? selectedCity.name : '';
+    this.cacheService.cachedValue = value;
+    this.displayedValue = this.myForm.get('Value').value;
     this.isButtonDisabled = false;
-
     this.loading = true;
 
     setTimeout(() => {
