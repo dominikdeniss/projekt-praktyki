@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PrimeIcons } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { TimelineModule } from 'primeng/timeline';
-import { CacheService } from '../app.component';
+import { CacheService } from '../services/cache.service';
 
 interface EventItem {
   status?: string;

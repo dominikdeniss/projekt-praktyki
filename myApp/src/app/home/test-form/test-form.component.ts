@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
 import { InputNumberModule } from 'primeng/inputnumber';
-import { CacheService } from '../../app.component';
+import { CacheService } from '../../services/cache.service';
 
 interface City {
   name: string;

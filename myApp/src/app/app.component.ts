@@ -6,20 +6,6 @@ import { DecimalPipe } from '@angular/common';
 import { MessageService, PrimeIcons, MenuItem } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { SpeedDialModule } from 'primeng/speeddial';
-import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class CacheService {
-  cachedName: string | undefined;
-  cachedSurname: string | undefined;
-  cachedBirthDate: string | undefined;
-  cachedCity: string | undefined;
-  cachedValue: string | undefined;
-
-  constructor() { }
-}
 
 @Component({
   selector: 'app-root',
