@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
 import { InputNumberModule } from 'primeng/inputnumber';
-import { CacheService } from '../../cache/cache.component';
+import { CacheService } from '../../app.component';
 
 interface City {
   name: string;
@@ -70,7 +70,7 @@ export class TestFormComponent implements OnInit {
     this.displayedCities = this.myForm.get('City').value.name;
     const selectedCity = this.myForm.get('City').value;
     this.displayedCities = selectedCity ? selectedCity.name : '';
-    this.cacheService.cachedBirthDate = birthDate instanceof Date ? birthDate.toLocaleDateString() : '';;
+    this.cacheService.cachedBirthDate = birthDate instanceof Date ? birthDate.toLocaleDateString() : '';
     this.cacheService.cachedName = firstName;
     this.cacheService.cachedSurname = lastName;
     this.cacheService.cachedCity = selectedCity ? selectedCity.name : '';

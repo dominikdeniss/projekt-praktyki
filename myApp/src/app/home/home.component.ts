@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
 import { CommonModule } from '@angular/common';
-import { MenuItem, MessageService } from 'primeng/api';
 import { PrimeIcons } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { TimelineModule } from 'primeng/timeline';
-import { CacheService } from '../cache/cache.component';
+import { CacheService } from '../app.component';
 
 interface EventItem {
   status?: string;
