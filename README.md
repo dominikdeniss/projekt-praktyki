@@ -49,3 +49,12 @@ ng serve
 <h4 align="center">In the fourth tab, there is a list of invoices, in which the invoice number is automatically shown on the page after entering the number in the search bar of the browser.</h4>
 
 <h4 align="center">The last tab is the test-form tab, where you can find a sample form. Once you have entered the data into the form cells, it will be shown below the form and on the home page.</h4>
+
+<h2 align="center">Contact</h2>
+<h3>Contributors</h2>
+
+https://github.com/kacperkrasnal
+<br>
+https://github.com/sebastianmatusiak
+<br>
+https://github.com/dominikdenis
