@@ -24,6 +24,34 @@
 
 <h2 align="center">Installation</h2>
 
+<h4 align="center">Firstly install WSL. This will allow you to run a Linux environment directly on Windows</h4>
+
+```ps
+wsl --install
+```
+
+<h3 align="center" style="color: red;">Next steps follow in the installed ubuntu terminal</h3>
+
+<h4 align="center">Secondly install ZSH and OH My Zsh</h4>
+
+```ps
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+<h4 align="center">Next step is to install the required plugins</h4>
+
+```ps
+1. apt install jq
+2. git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+3. git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+<h4 align="center">Now change bash</h4>
+
+```ps
+ chsh -s /bin/zsh root
+```
+
 <h4 align="center">Install npm packages</h4>
 
 ```ps
@@ -49,12 +77,3 @@ ng serve
 <h4 align="center">In the fourth tab, there is a list of invoices, in which the invoice number is automatically shown on the page after entering the number in the search bar of the browser.</h4>
 
 <h4 align="center">The last tab is the test-form tab, where you can find a sample form. Once you have entered the data into the form cells, it will be shown below the form and on the home page.</h4>
-
-<h2 align="center">Contact</h2>
-<h3>Contributors</h2>
-
-https://github.com/kacperkrasnal
-<br>
-https://github.com/sebastianmatusiak
-<br>
-https://github.com/dominikdenis
