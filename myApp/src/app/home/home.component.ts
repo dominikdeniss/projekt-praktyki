@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AccordionModule } from 'primeng/accordion';
 import { CommonModule } from '@angular/common';
-import { MenuItem, MessageService } from 'primeng/api';
 import { PrimeIcons } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { TimelineModule } from 'primeng/timeline';
+import { CacheService } from '../services/cache.service';
 
 interface EventItem {
   status?: string;
@@ -31,8 +31,9 @@ interface EventItem {
 export class HomeComponent implements OnInit {
   name: string = 'Jarek';
   surname: string = 'Kowalski';
-  age: number = 30;
-  isMale: boolean = true;
+  birthdate: string | undefined;
+  city: string | undefined;
+  value: string | undefined;
   actualDate: Date | undefined;
   dateVisible: boolean = true;
   guideList: string[] | undefined = [];
@@ -40,7 +41,7 @@ export class HomeComponent implements OnInit {
   completedTasks: string[] = [];
   events: EventItem[];
 
-  constructor(private messageService: MessageService) {
+  constructor(private cacheService: CacheService) {
     this.actualDate = new Date();
     this.guideList = [];
     this.events = [
@@ -98,7 +99,13 @@ export class HomeComponent implements OnInit {
       },
     ];
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.name = this.cacheService.cachedName || 'Jarek';
+    this.surname = this.cacheService.cachedSurname || 'Kowalski';
+    this.birthdate = this.cacheService.cachedBirthDate || '--';
+    this.city = this.cacheService.cachedCity || '--';
+    this.value = this.cacheService.cachedValue || '--';
+  }
 
   isTaskCompleted(task: string): boolean {
     return this.completedTasks.includes(task);
