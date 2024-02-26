@@ -1,5 +1,5 @@
 <p align="center">
-    <img src='https://www.bing.com/images/search?view=detailV2&ccid=pQ1aOOkQ&id=D5F293EECD12C05B1B3030B07A5AF3F46260F7C3&thid=OIP.pQ1aOOkQOIyG_Wq7T4eHNgHaC6&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a50d5a38e910388c86fd6abb4f878736%3frik%3dw%252fdgYvTzWnqwMA%26riu%3dhttp%253a%252f%252fwww.multifloor.com.pl%252fwp-content%252fuploads%252f2018%252f10%252freesco-logo.jpg%26ehk%3dZoasJq2kV%252bUdULzYbEZghemHtYhjBjWJ0pLz30rnA%252bg%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1048&expw=2667&q=reesco+logo&simid=608055756468802612&FORM=IRPRST&ck=D8F7CB451FA8AAB6783E0249C641A4F5&selectedIndex=0&itb=0&ajaxhist=0&ajaxserp=0' width=25%>
+    <img src='https://th.bing.com/th/id/R.a50d5a38e910388c86fd6abb4f878736?rik=w%2fdgYvTzWnqwMA&riu=http%3a%2f%2fwww.multifloor.com.pl%2fwp-content%2fuploads%2f2018%2f10%2freesco-logo.jpg&ehk=ZoasJq2kV%2bUdULzYbEZghemHtYhjBjWJ0pLz30rnA%2bg%3d&risl=&pid=ImgRaw&r=0' width=50%>
 </p>
 
 <h1 align="center"> Project using Angular and PrimeNG <h1>
