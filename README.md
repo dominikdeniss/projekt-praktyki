@@ -1,5 +1,5 @@
 <p align="center">
-    <img src='../projekt-praktyki/reesco_square_green_fill_no_bg.png' width=25%>
+    <img src='http://127.0.0.1:4200/assets/reesco_square_green_fill_no_bg.png' width=25%>
 </p>
 
 <h1 align="center"> Project using Angular and PrimeNG <h1>
