@@ -55,6 +55,6 @@ ng serve
 
 https://github.com/kacperkrasnal
 <br>
-https://github.com/sebastianmatusiak
+https://github.com/SebastianMatusiakk
 <br>
-https://github.com/dominikdenis
+https://github.com/dominikdeniss
